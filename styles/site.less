@@ -1,20 +1,20 @@
 
 // =======================================================
-// __          __   _       _     _   
-// \ \        / /  (_)     | |   | |  
-//  \ \  /\  / / __ _  __ _| |__ | |_ 
+// __          __   _       _     _
+// \ \        / /  (_)     | |   | |
+//  \ \  /\  / / __ _  __ _| |__ | |_
 //   \ \/  \/ / '__| |/ _` | '_ \| __|
-//    \  /\  /| |  | | (_| | | | | |_ 
+//    \  /\  /| |  | | (_| | | | | |_
 //     \/  \/ |_|  |_|\__, |_| |_|\__|
-//                     __/ |          
-//                    |___/ 
+//                     __/ |
+//                    |___/
 
 //  Template:     Wright
-//  Contact:      gzhang@squarespace.com 
+//  Contact:      gzhang@squarespace.com
 
 // =======================================================
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 860px) {
   @import 'sqs-grid-breaker';
 }
 
@@ -23,7 +23,7 @@
 // =======================================================
 
 //    HTML & Body
-    
+
 // =======================================================
 
 html {
@@ -62,7 +62,7 @@ body {
 // =======================================================
 
 //    Content Colors
-    
+
 // =======================================================
 
 
@@ -75,15 +75,15 @@ body {
 .mixin-template-heading-color (@h1-color, @h2-color, @h3-color) {
 
   h1 {
-    color: @h1-color; 
+    color: @h1-color;
     a { .link-style(@h1-color); }
   }
   h2 {
-    color: @h2-color; 
+    color: @h2-color;
     a { .link-style(@h2-color); }
   }
   h3 {
-    color: @h3-color; 
+    color: @h3-color;
     a { .link-style(@h3-color); }
   }
 
@@ -142,7 +142,7 @@ body {
 // =======================================================
 
 //    Typography
-    
+
 // =======================================================
 
 
@@ -173,17 +173,17 @@ p {
 //  Headings
 
 .responsive-font-size-h1 {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 860px) {
     .max-font-size (32px, @tweak-h1-font-font-size, @tweak-h1-font-letter-spacing);
   }
 }
 .responsive-font-size-h2 {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 860px) {
     .max-font-size (28px, @tweak-h2-font-font-size, @tweak-h2-font-letter-spacing);
   }
 }
 .responsive-font-size-h3 {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 860px) {
     .max-font-size (24px, @tweak-h3-font-font-size, @tweak-h3-font-letter-spacing);
   }
 }
@@ -228,7 +228,7 @@ h3 + h1, h3 + h2, h3 + h3 {
 
 .mixin-template-heading-color(@tweak-h1-color, @tweak-h2-color, @tweak-h3-color);
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 860px) {
   h1, h2, h3 {
     .hyphens(auto);
   }
@@ -271,7 +271,7 @@ a {
 // =======================================================
 
 //    Site
-    
+
 // =======================================================
 
 
@@ -288,7 +288,7 @@ a {
     border: @tweak-site-border-width solid @tweak-site-border-color;
     .responsive-border(@tweak-site-border-width);
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 860px) {
       .mixin-site-border-mobile-bar-color-top(@tweak-site-border-color, @tweak-mobile-bar-top-background-color);
       .mixin-site-border-mobile-bar-color-bottom(@tweak-site-border-color, @tweak-mobile-bar-bottom-background-color);
     }
@@ -342,7 +342,7 @@ a {
 // =======================================================
 
 //    Parallax
-    
+
 // =======================================================
 
 
@@ -385,7 +385,7 @@ a {
     overflow: hidden;
 
     background-color: rgba(red(@tweak-overlay-color), blue(@tweak-overlay-color), green(@tweak-overlay-color), 1);
-      
+
     // Safari
     -webkit-transform: translatez(0);
 
@@ -411,7 +411,7 @@ a {
       .transform(translatex(0));
 
       img {
-      
+
         // Safari
         -webkit-transform: translatez(0);
 
@@ -420,7 +420,7 @@ a {
 
         // Future
         will-change: transform;
-      
+
       }
 
     }
@@ -437,7 +437,7 @@ a {
 // =======================================================
 
 //    Intro
-    
+
 // =======================================================
 
 
@@ -468,7 +468,7 @@ a {
 
   position: relative;
   overflow: hidden;
-    
+
   background-color: @tweak-main-background-color;
   .font-smoothing(@tweak-main-background-color);
 
@@ -548,7 +548,7 @@ a {
   }
 
 }
-  
+
 .Intro:not(.Intro--has-image) + .Main .Main-content {
   padding-top: 0;
 }
@@ -561,11 +561,11 @@ a {
 // =======================================================
 
 //    Main
-    
+
 // =======================================================
 
 .Main {
-    
+
   background-color: @tweak-main-background-color;
   .font-smoothing(@tweak-main-background-color);
 
@@ -627,7 +627,7 @@ a {
   .sqs-col-12 {
 
     > .sqs-block:not(.float):not(.sqs-float-left):not(.sqs-float-right):not(.sqs-block-gallery):not(.sqs-block-image):not(.sqs-block-video):not(.sqs-block-map):not(.sqs-block-calendar):not(.sqs-block-menu):not(.sqs-block-tourdates):not(.sqs-block-summary-v2):not(.sqs-block-archive):not(.sqs-block-instagram) {
-      
+
       .border-box;
 
       width: @content-inset-width;
@@ -640,14 +640,14 @@ a {
 
   }
 
-} 
+}
 
 
 
 // =======================================================
 
 //    System Overrides
-    
+
 // =======================================================
 
 
@@ -766,7 +766,7 @@ a {
 
 .sqs-announcement-bar {
 
-  // z-index of 1000 won't overlap 
+  // z-index of 1000 won't overlap
   // the mobile overlay menu.
   z-index: 1000;
 
@@ -823,11 +823,8 @@ a {
 
 //  Force full-width spacer blocks on mobile
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 860px) {
   .sqs-layout .sqs-col-12 > .sqs-block-spacer {
     display: block;
   }
 }
-
-
-

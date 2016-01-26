@@ -34,12 +34,12 @@
       {.end}
     {.end}
 
-    <div class="Site sqs-announcement-bar-dropzone" data-nc-base="header" data-nc-min="640" data-nc-collapsible sqs-controller="Template.Controllers.Ancillary">
+    <div class="Site sqs-announcement-bar-dropzone" data-nc-base="header" data-nc-min="860" data-nc-collapsible sqs-controller="Template.Controllers.Ancillary">
 
       <header class="Header Header--top">
         <div class="Header-inner Header-inner--top" data-nc-group="top">
           <div data-nc-container="top-left">
-            
+
             <div class="Header-search" data-nc-element="search">
               <form class="Header-search-form" action="/search" method="get">
                 <input class="Header-search-form-input" name="q" type="text" spellcheck="false" value="" autocomplete="off" placeholder="Search" />
@@ -58,7 +58,7 @@
           <div data-nc-container="top-center">
           </div>
           <div data-nc-container="top-right">
-            
+
             {@|apply cart.block}
 
           </div>
@@ -75,7 +75,7 @@
               </nav>
             </div>
             <div data-nc-container="bottom-center">
-              
+
               <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                 {.section website}
                   {.section logoImageUrl}
@@ -89,7 +89,7 @@
 
             </div>
             <div data-nc-container="bottom-right">
-              
+
               <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
                 <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
               </nav>
@@ -99,7 +99,7 @@
         </header>
 
 
-        
+
         {.if collection}{.if item}{.or}{.equal? collection.typeName "index"}{.or}
           {.equal? collection.typeName "page"}
             {.if collection.mainImage}
@@ -142,7 +142,7 @@
     </div>
 
     <squarespace:script src="polyfills.js" combo="true" />
-    
+
     <squarespace:script src="sqs-core.dev.js" combo="true" />
     <squarespace:script src="sqs-controller.dev.js" combo="true" />
     <squarespace:script src="site.js" combo="true" />
@@ -163,6 +163,6 @@
     <squarespace:script src="controllers/OverlayOffset.js" combo="true" />
 
     {squarespace-footers}
-    
+
   </body>
-</html> 
+</html>
