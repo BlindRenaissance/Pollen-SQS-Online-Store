@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  
+
   /**
    * All template-level Javascript is namespaced
    * onto the Template namespace.
@@ -19,7 +19,7 @@
   window.Template.Constants = {
     AUTHENTICATED: document.documentElement.getAttribute('data-authenticated-account'),
     DEBUG: true,
-    MOBILE_BREAKPOINT: 640
+    MOBILE_BREAKPOINT: 860
   };
 
   /**
@@ -61,22 +61,22 @@
           isDragging = false;
         }, RESIZE_TIMEOUT);
       });
-    
+
     },
 
     isMobile: function () {
 
       var UA = {
-        Android: function() { return window.navigator.userAgent.match(/Android/i); }, 
-        BlackBerry: function() { return window.navigator.userAgent.match(/BlackBerry/i); }, 
-        iOS: function() { return window.navigator.userAgent.match(/iPhone|iPad|iPod/i); }, 
-        Opera: function() { return window.navigator.userAgent.match(/Opera Mini/i); }, 
+        Android: function() { return window.navigator.userAgent.match(/Android/i); },
+        BlackBerry: function() { return window.navigator.userAgent.match(/BlackBerry/i); },
+        iOS: function() { return window.navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+        Opera: function() { return window.navigator.userAgent.match(/Opera Mini/i); },
         Windows: function() { return window.navigator.userAgent.match(/IEMobile/i); }
       };
 
       return (UA.Android() || UA.BlackBerry() || UA.iOS() || UA.Opera() || UA.Windows());
     }
-    
+
   };
 
   /**
